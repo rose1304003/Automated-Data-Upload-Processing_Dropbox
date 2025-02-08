@@ -1,0 +1,130 @@
+Hi All,
+
+ 
+
+Here's the information on our current export implementation that you will want to replicate.
+
+
+
+When the export process runs, it takes two parameters:
+
+1. Account ID
+
+2. Batching count
+
+
+Then, the export process navigates the database as follows:
+
+for each patient in the specified user account
+
+  for each folder in the current patient
+
+    for each subfolder within the current folder
+
+      for each image in the current folder or subfolder
+
+        read exif image date
+
+        compute destination file name
+
+        write image data to the output file
+
+        set file creation date to the exif image date
+
+ 
+
+Basically, the export process enumerates all patients in the user account, then performs depth-first traversal of the patients, folders, and subfolders, and writes all images in each subfolder to the destination path.
+
+ 
+
+To get list of patients for user account:
+
+"select fld_guid, pat_fname, pat_mname, pat_lname, pat_email, pat_props, pat_cnumber, pat_bdate," +
+                "fld_owner, fld_import_guid " +
+                "from virtual_folder, patient_info " +
+                "where virtual_folder.fld_owner = '" + ownerId + "' " +
+                "and virtual_folder.fld_guid = patient_info.pat_fguid " +
+                "order by fld_guid";
+
+The only argument you need is the ownerId, which is the same as the Account ID specified on the command line.
+
+ 
+
+To get list of folders in for a patient:
+
+"select fld_guid, fld_name, fld_props, fld_pat_guid, fld_owner, fld_import_guid, fld_type " +
+                "from virtual_folder " +
+                "where fld_owner = '" + ownerGUID + "' " +
+                "and fld_parent_guid = '" + parentGUID + "' " +
+                "order by virtual_folder.fld_name";
+
+Here, the ownerGUID is the same as the Account ID, and the parentGUID is the fld_guid (essentially, the patient ID) returned by the previous query.
+
+This same query will get you a list of subfolders within a folder. For this, instead of passing a patient ID for parentGUID, you pass the folder ID which subfolders you want to retrieve.
+
+ 
+
+To get list of images for a given folder:
+
+"select fld_guid, fld_name, img_guid, img_name, img_type, img_desc, img_exif_date, " +
+                        "oi_width, oi_height, img_oguid, img_props, imap_pos, imap_vnum, img_timestamp, " +
+                        "img_import_guid, COALESCE(LENGTH(oi_data), 0) oi_data_size, img_props " +
+                        "from image_mast left join orig_images on (image_mast.img_guid = orig_images.oi_guid), virtual_folder, virtual_folder_imagemap " +
+                        "where virtual_folder.fld_guid = '" + folderGUID + "' " +
+                        "and   virtual_folder.fld_guid = virtual_folder_imagemap.imap_folder_guid " +
+                        "and   virtual_folder_imagemap.imap_img_guid = image_mast.img_guid " +
+                        "order by imap_pos ";
+
+The only thing you need to pass to this query is the folderGUID, which is the folder ID for which you are getting the list of images.
+
+Note that this also gives you an exif date.
+
+As you can see from this query, the image_mast table stores the metadata about each image.
+
+The orig_images table stores the actual image date.
+
+The virtual_folder_imagemap table stores the list of image IDs for each folder.
+
+ 
+
+In addition to traversing patients, folders, and subfolders, you also need to traverse a special folder that exists in every account, the "To Be Filed" folder. This folder is outside of the patient-folder hierarchy. Since this folder can also contain subfolders, it has to be traversed recursively, just like any other folder. For this, you can use the same queries as above, with one clarification that you need to pass the to_be_filed_folder_id as the parentGUID parameter.
+
+The to_be_filed_folder_id is built as follows:
+
+to_be_filed_folder_id = "ph-" + Account ID + "-tbf";
+
+ 
+
+Note on building the destination path:
+
+ 
+
+destination_path = Destination Path + "\" + Patient_Last_Name + ", " + Patient_First_Name + ", " + Patient_Middle_Name + " (" + Patient_ID + ")\" + <full_path_to_subfolder>;
+
+full_path_to_subfolder = Folder_Name + " (" + Folder_ID + ")";
+
+ 
+
+Essentially, you build the full path from the destination folder, all the way down to the leaf node subfolder, and then place images there.
+
+ 
+
+Depending on the target system, there may be a limit of how deep the folder hierarchy can be created or how many characters long the target path may contain. For these systems, the export process creates an "overflow" folder under each patient folder. The overflow folder has the path:
+
+overflow_path = Destination Path + "\" + Patient_Last_Name + ", " + Patient_First_Name + ", " + Patient_Middle_Name + " (" + Patient_ID + ")\" + "BULK_EXPORT" + <the_leaf_subfolder>;
+
+ 
+
+Also note that folder names can contain characters that are not allowed in the path names by the operating system. The export process replaces these characters with underscores _
+
+ 
+
+Hope this helps.
+
+ 
+
+I have attached the main export driver program here for reference. It calls a number of internal functions, but the flow is pretty clear. In the main function, the call to export images is close to the bottom of the function, just before the System.exit call. All other stuff in the main functions are there to handle scenarios when the export tool may be executed from a server other than the database server. This scenario is not relevant to you.
+
+ 
+
+Hope this helps.
