@@ -1,0 +1,122 @@
+2025-01-11 11:24:51,197 - INFO - Process started at 2025-01-11 11:24:51
+2025-01-11 11:25:37,577 - INFO - Process started at 2025-01-11 11:25:37
+2025-01-11 11:28:21,329 - INFO - Process started at 2025-01-11 11:28:21
+2025-01-11 11:28:21,333 - INFO - Connecting to db
+2025-01-11 11:28:43,103 - INFO - Process started at 2025-01-11 11:28:43
+2025-01-11 11:28:43,108 - INFO - Connecting to db
+2025-01-11 11:28:43,110 - INFO - Fetching data from DB...
+2025-01-11 11:28:43,114 - INFO - Folder path calculating
+2025-01-11 11:29:52,698 - INFO - Process started at 2025-01-11 11:29:52
+2025-01-11 11:29:52,703 - INFO - Connecting to db
+2025-01-11 11:29:52,704 - INFO - Fetching data from DB...
+2025-01-11 11:29:52,708 - INFO - Folder path calculating
+2025-01-11 11:30:24,570 - INFO - Process started at 2025-01-11 11:30:24
+2025-01-11 11:30:24,576 - INFO - Connecting to db
+2025-01-11 11:30:24,578 - INFO - Fetching data from DB...
+2025-01-11 11:30:24,583 - INFO - Folder path calculating
+2025-01-11 11:30:24,597 - INFO - Connecting to Dropbox
+2025-01-11 11:32:24,118 - INFO - Process started at 2025-01-11 11:32:24
+2025-01-11 11:32:24,124 - INFO - Connecting to db
+2025-01-11 11:32:24,126 - INFO - Fetching data from DB...
+2025-01-11 11:32:24,132 - INFO - Folder path calculating
+2025-01-11 11:32:24,150 - INFO - Connecting to Dropbox
+2025-01-11 11:32:47,349 - INFO - Process started at 2025-01-11 11:32:47
+2025-01-11 11:32:47,353 - INFO - Connecting to db
+2025-01-11 11:32:47,355 - INFO - Fetching data from DB...
+2025-01-11 11:32:47,361 - INFO - Folder path calculating
+2025-01-11 11:32:47,377 - INFO - Connecting to Dropbox
+2025-01-11 11:33:12,172 - INFO - Process started at 2025-01-11 11:33:12
+2025-01-11 11:33:12,177 - INFO - Connecting to db
+2025-01-11 11:33:12,178 - INFO - Fetching data from DB...
+2025-01-11 11:33:12,183 - INFO - Folder path calculating
+2025-01-11 11:33:12,204 - INFO - Connecting to Dropbox
+2025-01-11 11:33:12,218 - INFO - Uploading images to Dropbox...
+2025-01-11 11:33:12,219 - INFO - Creating folder in Dropbox...
+2025-01-11 11:33:12,219 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:12,219 - INFO - Creating folder in Dropbox...
+2025-01-11 11:33:12,220 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:12,220 - INFO - Creating folder in Dropbox...
+2025-01-11 11:33:12,220 - INFO - Uploading image tbf_null_test to Dropbox...
+2025-01-11 11:33:12,221 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:12,221 - INFO - Uploading image fly to Dropbox...
+2025-01-11 11:33:12,222 - INFO - Request to files/upload
+2025-01-11 11:33:12,222 - INFO - Uploading image tc_blog to Dropbox...
+2025-01-11 11:33:12,225 - INFO - Uploading image test_null to Dropbox...
+2025-01-11 11:33:12,226 - INFO - Request to files/upload
+2025-01-11 11:33:12,226 - INFO - Uploading image tgmaveric to Dropbox...
+2025-01-11 11:33:12,228 - INFO - Request to files/upload
+2025-01-11 11:33:12,228 - INFO - Request to files/upload
+2025-01-11 11:33:12,231 - INFO - Request to files/upload
+2025-01-11 11:33:13,191 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:13,192 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:13,217 - INFO - Uploading image tyson_punch to Dropbox...
+2025-01-11 11:33:13,217 - INFO - Request to files/upload
+2025-01-11 11:33:13,818 - INFO - Image tbf_null_test successfully uploaded to Dropbox.
+2025-01-11 11:33:13,819 - INFO - Uploading image tyson_vs_jones to Dropbox...
+2025-01-11 11:33:13,819 - INFO - Request to files/upload
+2025-01-11 11:33:14,193 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:14,194 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:14,252 - INFO - Image fly successfully uploaded to Dropbox.
+2025-01-11 11:33:14,252 - INFO - Uploading image mt to Dropbox...
+2025-01-11 11:33:14,252 - INFO - Request to files/upload
+2025-01-11 11:33:14,502 - INFO - Uploading image tyson1 to Dropbox...
+2025-01-11 11:33:14,503 - INFO - Request to files/upload
+2025-01-11 11:33:14,719 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:14,755 - INFO - Image tyson_punch successfully uploaded to Dropbox.
+2025-01-11 11:33:14,756 - INFO - Uploading image tc_jack_reacher to Dropbox...
+2025-01-11 11:33:14,756 - INFO - Request to files/upload
+2025-01-11 11:33:15,236 - INFO - Image tyson_vs_jones successfully uploaded to Dropbox.
+2025-01-11 11:33:15,237 - INFO - Uploading image tom_cruise_jack_reacher to Dropbox...
+2025-01-11 11:33:15,237 - INFO - Request to files/upload
+2025-01-11 11:33:15,406 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:15,603 - INFO - Image test_null successfully uploaded to Dropbox.
+2025-01-11 11:33:15,603 - INFO - Creating folder in Dropbox...
+2025-01-11 11:33:15,603 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:15,720 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:15,969 - INFO - Image mt successfully uploaded to Dropbox.
+2025-01-11 11:33:16,366 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:16,368 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:16,375 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:16,382 - INFO - Image tc_jack_reacher successfully uploaded to Dropbox.
+2025-01-11 11:33:16,407 - INFO - Request to files/upload
+2025-01-11 11:33:16,812 - INFO - Image tom_cruise_jack_reacher successfully uploaded to Dropbox.
+2025-01-11 11:33:17,367 - INFO - Request to files/create_folder_v2
+2025-01-11 11:33:17,369 - INFO - Request to files/upload
+2025-01-11 11:33:17,376 - INFO - Request to files/upload
+2025-01-11 11:33:17,739 - INFO - Image tgmaveric successfully uploaded to Dropbox.
+2025-01-11 11:33:18,465 - INFO - Image tc_blog successfully uploaded to Dropbox.
+2025-01-11 11:33:18,901 - INFO - Image tyson1 successfully uploaded to Dropbox.
+2025-01-11 11:33:18,907 - INFO - Uploading images to Dropbox...
+2025-01-11 11:33:18,909 - INFO - Uploading image family_photo to Dropbox...
+2025-01-11 11:33:18,909 - INFO - Uploading image fpmt to Dropbox...
+2025-01-11 11:33:18,909 - INFO - Request to files/upload
+2025-01-11 11:33:18,909 - INFO - Uploading image ali_tyson to Dropbox...
+2025-01-11 11:33:18,910 - INFO - Request to files/upload
+2025-01-11 11:33:18,910 - INFO - Uploading image tyson_holifild to Dropbox...
+2025-01-11 11:33:18,910 - INFO - Uploading image mi2_poster to Dropbox...
+2025-01-11 11:33:18,911 - INFO - Request to files/upload
+2025-01-11 11:33:18,912 - INFO - Uploading image mi2_tc to Dropbox...
+2025-01-11 11:33:18,913 - INFO - Uploading image mission_i_tc to Dropbox...
+2025-01-11 11:33:18,914 - INFO - Request to files/upload
+2025-01-11 11:33:18,914 - INFO - Request to files/upload
+2025-01-11 11:33:18,915 - INFO - Request to files/upload
+2025-01-11 11:33:18,916 - INFO - Request to files/upload
+2025-01-11 11:33:19,900 - INFO - Image family_photo successfully uploaded to Dropbox.
+2025-01-11 11:33:20,328 - INFO - Image mi2_tc successfully uploaded to Dropbox.
+2025-01-11 11:33:20,847 - INFO - Image tyson_holifild successfully uploaded to Dropbox.
+2025-01-11 11:33:21,221 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:21,231 - INFO - Image ali_tyson successfully uploaded to Dropbox.
+2025-01-11 11:33:21,620 - INFO - Ratelimit: Retrying in 1.0 seconds.
+2025-01-11 11:33:21,640 - INFO - Image mi2_poster successfully uploaded to Dropbox.
+2025-01-11 11:33:22,222 - INFO - Request to files/upload
+2025-01-11 11:33:22,622 - INFO - Request to files/upload
+2025-01-11 11:33:23,481 - INFO - Image fpmt successfully uploaded to Dropbox.
+2025-01-11 11:33:23,843 - INFO - Image mission_i_tc successfully uploaded to Dropbox.
+2025-01-11 11:33:23,844 - INFO - Total time taken for full process: 11.672537995007588 seconds
+2025-01-11 11:34:20,735 - INFO - Process started at 2025-01-11 11:34:20
+2025-01-11 11:34:20,740 - INFO - Connecting to db
+2025-01-11 11:34:20,742 - INFO - Fetching data from DB...
+2025-01-11 11:34:20,748 - INFO - Folder path calculating
+2025-01-11 11:34:20,768 - INFO - Connecting to Dropbox
+2025-01-11 11:34:20,772 - INFO - Total time taken for full process: 0.037019213996245526 seconds
+2025-01-11 11:34:20,772 - INFO - Process started at 2025-01-11 11:34:20 and ended at 2025-01-11 11:34:20
